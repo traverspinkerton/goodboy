@@ -1,0 +1,50 @@
+.breedlist {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  gap: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  .breedlist {
+    grid-template-columns: repeat(3, 150px);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .breedlist {
+    grid-template-columns: repeat(2, 150px);
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .breedlist {
+    grid-template-columns: 150px;
+    width: 150px;
+  }
+}
+
+.breedlist-item {
+  display: grid;
+}
+
+.breedlist-item > * {
+  grid-area: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breedlist-item > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  object-fit: scale-down;
+}
+
+.breedlist-item > div > p {
+  z-index: 100;
+  font-size: 16px;
+  font-weight: bold;
+  color: steelblue;
+  background: white;
+}
